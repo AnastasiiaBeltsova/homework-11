@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body class="body">
+    
+    <div class="bg">
+        <div class="card">
+            <div class="logo-wrap"><img class="card__logo" src="images/logo1.png" alt="logo"></div>
+            <div class="number-wrap">
+                <span class="card__number">
+                    <p class="card__subtext js--number">#### #### #### ####</p>
+                </span>
+            </div>
+            <div class="text-wrap">
+                <span class="card__owner">
+                    <p class="card__text">Card Holder</p>
+                    <p class="card__holder card__subtext">Name Surname</p>
+                </span>
+                <span class="card__date">
+                    <p class="card__text">Expires</p>
+                    <span class="card__subtext js--month">MM</span><span class="card__subtext">/</span><span class="card__subtext js--year">YY</span>
+                </span>
+            </div>
+            
+        </div>
+        <form class="form" action="#" onsubmit="getFormValue(event)">
+            <p>
+                <label>
+                    Card Number <br>
+                    <input id="form__number" class="form__number" type="text" maxlength="16" onkeyup="input()">
+                </label>
+            </p>
+            <p>
+                <label>
+                    Card Name <br>
+                    <input class="form__name" type="text">
+                </label>
+            </p>
+            <div class="form__line">
+                <p>
+                    <label>
+                        Expiration Date <br>
+                        <select class="form__month" name="month" >
+                            <option value="">Month</option>
+                            <option value="01">01</option>
+                            <option value="02">02</option>
+                            <option value="03">03</option>
+                            <option value="04">04</option>
+                            <option value="05">05</option>
+                            <option value="06">06</option>
+                            <option value="07">07</option>
+                            <option value="08">08</option>
+                            <option value="09">09</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label> <br>
+                        <select class="form__year" name="year" onchange="changeYear()">
+                            <option value="">Year</option>
+                            <option value="22">22</option>
+                            <option value="23">23</option>
+                            <option value="24">24</option>
+                            <option value="25">25</option>
+                            <option value="26">26</option>
+                        </select>
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        CVV <br>
+                        <input class="form__cvv" type="password" maxlength="3" required>
+                    </label>
+                </p>
+            </div>
+            
+            <button class="form__btn" type="submit">Submit</button>
+        </form>
+    </div>
+
+    
+    <script src="./index.js"></script>
+</body>
+</html>
